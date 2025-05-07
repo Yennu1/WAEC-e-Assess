@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test| WAEC e-Assess</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Test | WAEC e-Assess</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+
+</head>
+<body>
+
+  <!-- Sidebar (same as dashboard) -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="./Assets/images/WAEC logo 1.png" alt="WAEC Logo" class="logo-img">
+      <p class="logo-text">WAEC e-Assess</p>
+    </div>
+    <ul class="navigation">
+      <li><a href="/dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+      <li><a href="test.html" class="active"><i class='bx bx-book-alt'></i> Aptitude Test</a></li>
+      <li><a href="./profile.html"><i class='bx bx-user'></i> My Profile</a></li>
+      <li><a href="#"><i class='bx bx-edit'></i> Result</a></li>
+      <li class="log-out"><a href="#"><i class='bx bx-log-out-circle'></i> Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <header>
+      <div class="breadcrumbs"> Aptitude Test</div>
+    </header>
+
+    <div class="aptitude-section" id="testSelection">
+      <h2>Choose a Subject to Begin 📝</h2>
+      <p class="instructions">Click on a subject to start the test.</p>
+
+      <div class="test-cards ">
+        <div class="test-card locked"  data-subject="Mathematics" >
+          <h3>Mathematics</h3>
+          <p>20 Questions | 30 mins</p>
+          <span class="due-date">Due: 26 April, 2025</span>
+        </div>
+        <div class="test-card locked" onclick="startTest('English Language')">
+          <h3>English Language</h3>
+          <p>25 Questions | 35 mins</p>
+          <span class="due-date">Due: 30 April, 2025</span>
+        </div>
+        <div class="test-card" onclick="startTest('Science')">
+          <h3>Science</h3>
+          <p>30 Questions | 30 mins</p>
+          <span class = "available">Start now</span>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2: Actual Test Interface (Hidden initially) -->
+    <div class="test-interface" id="testInterface" style="display: none;">
+      <h2 id="testSubject"></h2>
+      <div class="timer" id="timer">Time Left: <span id="time">30:00</span></div>
+      
+      <div class="question-box">
+        <p id="questionText">Question text will appear here.</p>
+      <img id="questionImage" src="" alt="Diagram" style="max-width:100%; margin: 15px 0; display: none; width: 150px; " />
+
+        <div class="options" id="optionsContainer">
+
+         
+        </div>
+        <button class="start-btn" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./test.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>
